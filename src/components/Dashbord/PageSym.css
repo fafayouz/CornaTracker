@@ -1,0 +1,161 @@
+.PageSym-Container {
+    width: 90%;
+    height: 90%;
+    background-color: #1A0F52;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    border-radius: 0.7rem;
+}
+/* #6235FF */
+
+
+.PageSym-Title {
+    width: 60%;
+    height: 10%;
+    background-color: #6235FF ;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: white;
+    letter-spacing: 1.5px;
+    padding: 1rem;
+    animation: title 0.4s ease-in;
+}
+@keyframes title {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.PageSym-P {
+    width: 85%;
+    height: 50%;
+    background-color: #6235FF;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 1rem;
+    opacity: 0;
+    animation: title 0.8s 0.5s ease-in both;
+
+}
+.Box-arrows {
+    width: 60%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.Box-arrow {
+    width: 20%;
+    height: 100%;
+    background-color: #6235FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    animation: title 0.8s 1s ease-in both;
+
+}
+.Box-arrow:hover {
+    height: 90%;
+    background-color: #552ee2;
+}
+@media only screen and (max-width: 768px) {
+    .PageSym-Container {
+        width: 97%;
+        height: 95%;
+    }
+    .PageSym-Title {
+        width: 85%;
+        height: 5%;
+        background-color: #6235FF ;
+        letter-spacing: 1px;
+
+    }
+    .PageSym-Title h2 {
+        font-size: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .PageSym-P {
+        width: 85%;
+        height: 50%;
+        font-size: 0.7rem;
+        font-weight: 400;
+    
+    }
+    .Box-arrows {
+        width: 90%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .Box-arrow {
+        width: 40%;
+        height: 60%;
+        background-color: #6235FF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        font-weight: bold;
+        color: white;
+        border-radius: 0.4rem;
+        cursor: pointer;
+        animation: title 0.8s 1s ease-in both;
+    
+    }
+    .Box-arrow:hover {
+        height: 60%;
+    }
+
+}
+@media only screen and (min-width: 320px){
+    .PageSym-Title h2 {
+        font-size: 0.42rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .PageSym-P {
+        width: 85%;
+        height: 57%;
+        font-size: 0.56rem;
+        font-weight: 400;
+    
+    }
+}
+@media only screen and (min-width: 375px) {
+  
+    .PageSym-Title h2 {
+        font-size: 0.42rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .PageSym-P {
+        width: 85%;
+        height: 50%;
+        font-size: 0.63rem;
+        font-weight: 400;
+    
+    }
+}
