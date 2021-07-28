@@ -163,7 +163,7 @@
         font-size: 0.9rem; 
     }
 }
-@media only screen and (max-height: 667px ) and (min-width: 320px) {
+@media only screen and (max-height: 640px ) and (min-width: 320px) {
     .Box-ask {
         width: 95%;
         height: 20%;

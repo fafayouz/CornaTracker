@@ -128,7 +128,7 @@
     }
 
 }
-@media only screen and (min-width: 320px){
+@media only screen and (max-width: 768px) {
     .PageSym-Title h2 {
         font-size: 0.42rem;
         display: flex;
@@ -143,7 +143,7 @@
     
     }
 }
-@media only screen and (min-width: 375px) {
+@media only screen and (max-height: 640px ) and (min-width: 320px) {
   
     .PageSym-Title h2 {
         font-size: 0.42rem;
@@ -154,7 +154,7 @@
     .PageSym-P {
         width: 85%;
         height: 50%;
-        font-size: 0.63rem;
+        font-size: 0.6rem;
         font-weight: 400;
     
     }
