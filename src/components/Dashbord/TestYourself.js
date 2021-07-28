@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { DataQuiz } from '../Quiz/DataQuiz'
 import './TestYourself.css'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import StartPage from '../Quiz/StartPage';
 
 const TestYourself = () => {
-    const [PageQuiz , SetPageQuiz] = useState(false)
+    const [ , SetPageQuiz] = useState(false)
     const [PageTestYourself , setPageTestYourself] = useState(true)
 
     const Demarrer  = () => {

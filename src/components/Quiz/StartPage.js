@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { DataQuiz } from './DataQuiz'
-import PageResult from './PageResult'
 import './StartPage.css'
 
 

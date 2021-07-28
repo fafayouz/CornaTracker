@@ -19,8 +19,8 @@ const PageJournal = () => {
             </div>
             <div className="Journal-Container">
             {JournalData.map((Videos) => (
-                 <div className="Video-Box">
-                 <iframe key={Videos.key} frameBorder="0" allowFullScreen="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" width="100%" height="100%" src={Videos.lien} title="YouTube video player" >
+                 <div key={Videos.key} className="Video-Box">
+                 <iframe  frameBorder="0"  loading="lazy" width="100%" height="100%" src={Videos.lien} title="YouTube video player" >
                  </iframe>
                  </div>
                  ))}

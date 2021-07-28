@@ -5,8 +5,6 @@ import LocalHospitalRoundedIcon from '@material-ui/icons/LocalHospitalRounded';
 import MenuBookRoundedIcon from '@material-ui/icons/MenuBookRounded';
 import './Navbar.css'
 import covid from './covid.png'
-import home from './navimage/home.png'
-import sym from './navimage/sym.png'
 import Pagehome from '../Dashbord/Pagehome';
 import PageSym from '../Dashbord/PageSym';
 import TestYourself from '../Dashbord/TestYourself';
