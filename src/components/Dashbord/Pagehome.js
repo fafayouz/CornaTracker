@@ -1,40 +1,30 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Pagehome.css'
-
+import axios from 'axios'
+import SyncLoader from "react-spinners/ClipLoader";
 
 const Pagehome = () => {
-    const [Popultaion, setPopultaion] = useState()
-    const [NewCases, setNewCases] = useState()
-    const [Trecovered, setTrecovered] = useState()
-    const [NewDeaths, setNewDeaths] = useState()
-    const [TotalDeaths, setTotalDeaths] = useState()
-    const [Total, setTotal] = useState()
+    const [Data, setData] = useState()
+    const [Loading , setLoading] = useState(true)
+const Searching = (x) => {
+    return x.countryCode === 'DZ';
+  };
+useEffect(() => {
+        axios.get('https://api.coronatracker.com/v3/stats/worldometer/country').then(async(res) => {
+            const alldata = await res.data.filter(Searching) 
+            if(alldata){
+                setLoading(false)
+                setData(alldata[0])
+            }else{
+                setLoading()
+                
+            }
+           
+        })
+}, [])
+console.log(Data)
 
-    var axios = require("axios").default;
 
-var options = {
-  method: 'GET',
-  url: 'https://covid-193.p.rapidapi.com/statistics',
-  params : {country : 'Algeria'},
-  headers: {
-    'x-rapidapi-key': '1cdf1e1a8dmsha124c5802ebd4b6p101483jsncadc050a56e8',
-    'x-rapidapi-host': 'covid-193.p.rapidapi.com'
-  }
-};
-
-axios.request(options).then(function (response) {
-    const DATA = response.data.response[0]
-    setPopultaion(DATA.population)
-    setNewCases(DATA.cases.new)
-    setTrecovered(DATA.cases.recovered)
-    setNewDeaths(DATA.deaths.new)
-    setTotalDeaths(DATA.deaths.total)
-    setTotal(DATA.cases.total)
-}).catch(function (error) {
-	console.error(error);
-});
-const internationalNumberFormat = new Intl.NumberFormat('en-US')
-const populationNumber = internationalNumberFormat.format(Popultaion)
     return (
         <>
             <div className="Home-Container">
@@ -49,31 +39,68 @@ const populationNumber = internationalNumberFormat.format(Popultaion)
                 <div className="List-Box">
                     <div className="Box">
                         <h1>Population</h1>
-                        <span className="Population-c">{populationNumber}</span>
+                        <span className="Population-c">44,695,120</span>
                     </div>
                     <div className="Box">
                         <h1>New Cases</h1>
-                        <span className="NewCases-c"> {NewCases} </span>
+                        {Loading ? (
+                            <>
+                            <SyncLoader/>
+                            </>
+                        ):(
+                            <>
+                             <span className="NewCases-c"> {Data && Data.dailyConfirmed === 0 ? <SyncLoader/> : Data && Data.dailyConfirmed} </span>
+                            </>
+                        )}
                     </div>
                     <div className="Box">
                     <h1>Total Recovered</h1>
-                        <span className="TotalRecovered-c"> {Trecovered} </span>
+                    {Loading ? (
+                            <>
+                            <SyncLoader/>
+                            </>
+                        ):(
+                            <>
+                             <span className="NewCases-c"> {Data && Data.totalRecovered} </span>
+                            </>
+                        )}
                     </div>
                     <div className="Box">
                      <h1>New Deaths</h1>
-                        <span className="NewDeaths-c"> {NewDeaths} </span>
+                     {Loading ? (
+                            <>
+                            <SyncLoader/>
+                            </>
+                        ):(
+                            <>
+                             <span className="NewCases-c"> {Data && Data.dailyDeaths === 0 ? <SyncLoader/> : Data && Data.dailyDeaths} </span>
+                            </>
+                        )}
                     </div>
                     <div className="Box">
                     <h1>Total Deaths</h1>
-                        <span className="Rank-c"> {TotalDeaths} </span>
+                    {Loading ? (
+                            <>
+                            <SyncLoader/>
+                            </>
+                        ):(
+                            <>
+                             <span className="NewCases-c"> {Data && Data.totalDeaths} </span>
+                            </>
+                        )}
                     </div>
                     <div className="Box">
                     <h1>Total</h1>
-                        <span className="Total-c"> {Total} </span>
-                    </div>
-                   
-                   
-                    
+                    {Loading ? (
+                            <>
+                            <SyncLoader/>
+                            </>
+                        ):(
+                            <>
+                             <span className="NewCases-c"> {Data && Data.totalConfirmed} </span>
+                            </>
+                        )}
+                    </div>   
                 </div>
             </div>
         </>

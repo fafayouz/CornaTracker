@@ -12,7 +12,7 @@
     height: 20%;
     background-color: white;
     border-radius: 0.7rem;
-    font-size: 2.2rem;
+    font-size: 1.1rem;
     display: flex;
     align-items:center ;
     justify-content: center;
@@ -34,7 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.2rem;
+    font-size: 1.2rem;
     color: white;
     letter-spacing: 1.5px;
     cursor: pointer;
@@ -42,9 +42,8 @@
     transition: all 0.2s cubic-bezier(1, 0, 0, 1);
 }
 .Box-Reply div:hover {
-    width: 18%;
     height: 48%;
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 .Result-Container {
     width: 80%;
@@ -76,7 +75,7 @@
     align-items: center ;
     text-align: center;
     font-weight: bold;
-    font-size: 1.7rem;
+    font-size: 1.0rem;
 
 }
 .Moyenne-box {
@@ -90,7 +89,7 @@
     align-items: center ;
     text-align: center;
     font-weight: bold;
-    font-size: 1.7rem;
+    font-size: 1.0rem;
 
 }
 .Danger-box {
@@ -104,7 +103,7 @@
     align-items: center ;
     text-align: center;
     font-weight: bold;
-    font-size: 1.7rem;
+    font-size: 1.0rem;
 
 
 }

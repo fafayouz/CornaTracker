@@ -50,19 +50,19 @@ const Navbar = () => {
                 </div>
                 <div className="Navbar">
                   <div onClick={Pageone} className={Home ? "list" : "list1"}>
-                         <span className="icon-img"> <HomeRoundedIcon fontSize="large"/> </span>
+                         <span className="icon-img"> <HomeRoundedIcon fontSize="medium"/> </span>
                          <span className="list-title">Home</span>
                   </div>
                   <div onClick={Pagetwo} className={Symptoms ? "list" : "list1"}>
-                         <span className="icon-img"> <AccessibilityRoundedIcon fontSize="large"/> </span>
+                         <span className="icon-img"> <AccessibilityRoundedIcon fontSize="medium"/> </span>
                          <span className="list-title">Conseils</span>
                   </div>
                   <div onClick={PageThree} className={Testyourself ? "list" : "list1"}>
-                         <span className="icon-img"> <LocalHospitalRoundedIcon fontSize="large"/> </span>
+                         <span className="icon-img"> <LocalHospitalRoundedIcon fontSize="medium"/> </span>
                          <span className="list-title">Test Yourself</span>
                   </div>
                   <div onClick={PageFour} className={Journal ? "list" : "list1"}>
-                         <span className="icon-img"> <MenuBookRoundedIcon fontSize="large"/> </span>
+                         <span className="icon-img"> <MenuBookRoundedIcon fontSize="medium"/> </span>
                          <span className="list-title">Journal</span>
                   </div>
                             
